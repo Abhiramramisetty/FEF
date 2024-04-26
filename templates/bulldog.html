@@ -1,0 +1,29 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bulldog Information</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'bulldog.css'%}">
+    <script>
+        function addItemAndRedirect() {
+            // Redirect to the payment option page
+            window.location.href = "{% url 'payment' %}"; // Use Django's URL template tag to generate the URL
+        }
+    </script>
+</head>
+<body>
+    <h1>Bulldog Information</h1>
+
+    <ul>
+      <li><strong>Name:</strong> Bulldog</li>
+        <li><strong>Other Name:</strong> English Bulldog</li>
+        <li><strong>Age:</strong> Varies</li>
+        <li><strong>Lifespan:</strong> 8-10 years</li>
+        <li><strong>Height:</strong> 12-16 inches</li>
+        <li><strong>Weight:</strong> 40-50 pounds</li>
+        <li><strong>Color:</strong> Various, including white, fawn, and brindle</li>
+    </ul>
+<button class="add-button" onclick="addItemAndRedirect()">Adopt</button>
+</body>
+</html>

@@ -1,0 +1,23 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'parakeets.css' %}">
+    <script>
+        function addItemAndRedirect() {
+            // Redirect to the payment option page
+            window.location.href = "{% url 'payment' %}"; // Use Django's URL template tag to generate the URL
+        }
+    </script>
+</head>
+<body>
+Special Info<br>
+Weight: 1 ounce<br>
+Length: 6 to 8 inches<br>
+Lifespan: When cared for properly a pet budgie has a life expectancy of 7 -15 years<br>
+Physical Characteristics:<br>
+    Found in a variety of colors including neon green, yellow, blue, violet, and more with black bars on head, wings and back
+<button class="add-button" onclick="addItemAndRedirect()">Adopt</button>
+</body>
+</html>

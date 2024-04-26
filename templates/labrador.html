@@ -1,0 +1,28 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Labrador Information</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'labrador.css'%}">
+    <script>
+        function addItemAndRedirect() {
+            // Redirect to the payment option page
+            window.location.href = "{% url 'payment' %}"; // Use Django's URL template tag to generate the URL
+        }
+    </script>
+</head>
+<body>
+    <h1>Labrador Information</h1>
+
+    <ul>
+        <li><strong>Name:</strong> Labrador Retriever</li>
+        <li><strong>Age:</strong> Varies</li>
+        <li><strong>Lifespan:</strong> 10-12 years</li>
+        <li><strong>Height:</strong> 22.5-24.5 inches (male), 21.5-23.5 inches (female)</li>
+        <li><strong>Weight:</strong> 65-80 pounds (male), 55-70 pounds (female)</li>
+        <li><strong>Color:</strong> Various, including black, yellow, and chocolate</li>
+    </ul>
+<button class="add-button" onclick="addItemAndRedirect()">Addopt</button>
+</body>
+</html>

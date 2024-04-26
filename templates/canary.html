@@ -1,0 +1,25 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'canary.css' %}">
+    <script>
+        function addItemAndRedirect() {
+            // Redirect to the payment option page
+            window.location.href = "{% url 'payment' %}"; // Use Django's URL template tag to generate the URL
+        }
+    </script>
+</head>
+<body>
+Species Info<br>
+
+Weight: Less than 1 ounce<br>
+
+Length: 4 to 8 inches<br>
+
+Physical Characteristics: These lovely birds can be yellow or green, bright orange or brown. Known for their vibrant color and ability to carry a tune, canaries are ideal if you’re a beginner who isn’t sure if they want a bird that requires a lot of attention. While they’d prefer not to be handled, canaries are happy to play the entertaining beauty. But beware, these little birds are fragile and can be easily frightened.<br>
+Lifespan: Canaries typically live for between 9-10 years if well cared for, although in rare cases these little birds can live for 15 years or even longer!<br>
+<button class="add-button" onclick="addItemAndRedirect()">Adopt</button>
+</body>
+</html>

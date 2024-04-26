@@ -1,0 +1,28 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Shih Tzu Information</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'shitztu.css'%}">
+    <script>
+        function addItemAndRedirect() {
+            // Redirect to the payment option page
+            window.location.href = "{% url 'payment' %}"; // Use Django's URL template tag to generate the URL
+        }
+    </script>
+</head>
+<body>
+    <h1>Shih Tzu Information</h1>
+
+    <ul>
+        <li><strong>Name:</strong> Shih Tzu</li>
+        <li><strong>Age:</strong> Varies</li>
+        <li><strong>Lifespan:</strong> 10-16 years</li>
+        <li><strong>Height:</strong> 8-11 inches</li>
+        <li><strong>Weight:</strong> 9-16 pounds</li>
+        <li><strong>Color:</strong> Various, including white, black, gold, and red</li>
+    </ul>
+<button class="add-button" onclick="addItemAndRedirect()">Adopt</button>
+</body>
+</html>

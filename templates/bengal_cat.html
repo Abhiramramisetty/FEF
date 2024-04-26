@@ -1,0 +1,35 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'bengal_cat.css' %}">
+    <script>
+        function addItemAndRedirect() {
+            // Redirect to the payment option page
+            window.location.href = "{% url 'payment' %}"; // Use Django's URL template tag to generate the URL
+        }
+    </script>
+</head>
+<body>
+    <h1>Bengal Cat</h1>
+    <h2>Exotic Breeds</h2>
+    <p>
+        Often referred to as the "Miniature Leopard" of the domestic cats, the Bengal is a unique breed designed to resemble exotic wild cats such as Ocelots, Margays, and Clouded Leopards. Bengals are active, energetic, and playful kitties who have a lean and muscular body, broad head, relatively short ears, and a long neck.
+    </p>
+    <h2>Main Info</h2>
+    <ul>
+        <li><strong>Origin:</strong> USA</li>
+        <li><strong>Coat Pattern:</strong> Spotted, rosetted, marbled</li>
+        <li><strong>Coat Length:</strong> Shorthair and Longhair</li>
+        <li><strong>Health Issues:</strong>
+            <ul>
+                <li>Erythrocyte pyruvate kinase deficiency</li>
+                <li>Progressive retinal atrophy</li>
+                <li>Hypertrophic cardiomyopathy (HCM)</li>
+            </ul>
+        </li>
+    </ul>
+<button class="add-button" onclick="addItemAndRedirect()">Adopt</button>
+</body>
+</html>

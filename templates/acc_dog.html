@@ -1,0 +1,68 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        body {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px; /* Add spacing between images, prices, and buttons */
+        }
+        .image-container {
+            text-align: center;
+        }
+        .image-container img {
+            width: 300px; /* Set the width of the images */
+            height: 300px; /* Set the height of the images */
+            object-fit: cover; /* Ensure the images maintain their aspect ratio */
+            margin-bottom: 10px; /* Add spacing below the images */
+        }
+        .add-button {
+            padding: 10px 20px; /* Set padding for the button */
+            font-size: 16px;
+            background-color: #555;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .add-button:hover {
+            background-color: black;
+        }
+        .price {
+            font-size: 18px; /* Set font size for the prices */
+            margin-bottom: 10px; /* Add spacing below the prices */
+        }
+    </style>
+    <script>
+        function addItemAndRedirect() {
+            // Redirect to the payment option page
+            window.location.href = "{% url 'payment' %}"; // Use Django's URL template tag to generate the URL
+        }
+    </script>
+</head>
+<body>
+    <div class="image-container">
+        <h1>Dog Belt</h1>
+        <img src="{% static 'dog_belt.jpeg' %}" alt="birds">
+        <p class="price">150/-</p> <!-- Display the price -->
+        <button class="add-button" onclick="addItemAndRedirect()">Add Item</button>
+    </div>
+    <div class="image-container">
+        <h1>Dog Food</h1>
+        <img src="{% static 'dog_food.jpg' %}" alt="birds">
+        <p class="price">300/-</p> <!-- Display the price -->
+        <button class="add-button" onclick="addItemAndRedirect()">Add Item</button>
+    </div>
+    <div class="image-container">
+        <Dog Shampoo></Dog>
+        <img src="{% static 'dog_shampoo.jpg' %}" alt="birds">
+        <p class="price">390/-</p> <!-- Display the price -->
+        <button class="add-button" onclick="addItemAndRedirect()">Add Item</button>
+    </div>
+    <!-- Add similar image-container, price, and button elements for other images -->
+</body>
+</html>

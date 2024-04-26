@@ -1,0 +1,27 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'ragdoll.css' %}">
+    <script>
+        function addItemAndRedirect() {
+            // Redirect to the payment option page
+            window.location.href = "{% url 'payment' %}"; // Use Django's URL template tag to generate the URL
+        }
+    </script>
+</head>
+<body>
+Ragdoll<br>
+Western Breeds<br>
+Ragdolls are blue-eyed beauties known for their affectionate nature and tendency to go “limp like a ragdoll” when carried. They make wonderful family pets and get along well with other cats and dogs.<br>
+Main Info<br>
+Origin:USA<br>
+Coat Pattern: Bi-color, van, mitted, colorpoint<br>
+Coat Length:Semi-longhaired<<br>
+Health Issues:<br>
+Feline Infectious Peritonitis<br>
+Hypertrophic cardiomyopathy (HCM)<br>
+<button class="add-button" onclick="addItemAndRedirect()">Adopt</button>
+</body>
+</html>

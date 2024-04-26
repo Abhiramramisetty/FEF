@@ -1,0 +1,23 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'hyacinth.css' %}">
+    <script>
+        function addItemAndRedirect() {
+            // Redirect to the payment option page
+            window.location.href = "{% url 'payment' %}"; // Use Django's URL template tag to generate the URL
+        }
+    </script>
+</head>
+<body>
+Species Info<br>
+
+Weight: 42 to 51 ounces<br>
+Length: 40 inches<br>
+Lifespan: Often live 30+ years<br>
+Physical Characteristics: Solid blue plumage; yellow patches around eyes and beak; black beak; dark gray feet<br>
+<button class="add-button" onclick="addItemAndRedirect()">Adopt</button>
+</body>
+</html>

@@ -1,0 +1,90 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home Page</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+    <style>
+        /* Style the navigation bar */
+        nav {
+            background-color: #333;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between; /* Align links horizontally */
+            align-items: center; /* Center vertically */
+            padding: 10px 20px;
+        }
+
+        /* Style the links inside the navigation bar */
+        nav a {
+            color: #f2f2f2;
+            text-decoration: none;
+            margin: 0 10px; /* Add spacing between links */
+        }
+
+        /* Change the color of links on hover */
+        nav a:hover {
+            color: #ddd;
+        }
+
+        /* Style the images */
+        section ul {
+            display: flex; /* Display images in a row */
+            justify-content: space-around; /* Align images with equal space around them */
+            align-items: center; /* Center images vertically */
+            list-style-type: none; /* Remove default list styles */
+            padding: 0; /* Remove padding */
+        }
+
+        section ul li {
+            text-align: center; /* Center text */
+        }
+
+        section ul li img {
+            width: 350px; /* Set the width of the images */
+            height: 350px; /* Maintain aspect ratio */
+            margin: 10px; /* Add spacing around images */
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Pet Adoption and Accessories Management System</h1>
+    </header>
+    <nav>
+        <div>
+            <a href="{% url 'home' %}">Home</a>
+            <a href="{% url 'aboutus' %}">About Us</a>
+            <a href="{% url 'contactus' %}">Contact Us</a>
+            <a href="{% url 'sell' %}">Sell Pets</a>
+        </div>
+    </nav>
+    <main>
+        <section>
+            <h2>Our Services</h2>
+            <ul>
+                <li>
+                    <h1>Pet Adoption</h1>
+                    <a href="{% url 'adoption' %}">
+                        <img src="{% static 'pet.jpg' %}" alt="Pet 1">
+                    </a>
+                </li>
+                <li>
+                    <h1>Pet Accessories Management</h1>
+                    <a href="{% url 'accessories' %}">
+                        <img src="{% static 'accessories.jpg' %}" alt="Pet 2">
+                    </a>
+                </li>
+                <li>
+                    <h1>Pet Care Tips</h1>
+                    <a href="{% url 'dogtip' %}">
+                        <img src="{% static 'dogtip.jpg' %}" alt="Pet 2">
+                    </a>
+                    <!-- Add your content for Pet Care Tips here -->
+                </li>
+            </ul>
+        </section>
+    </main>
+</body>
+</html>

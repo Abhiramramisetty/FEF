@@ -1,0 +1,37 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Birds</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'birdcss.css' %}">
+</head>
+<body>
+Birds:
+<div class="container">
+        <a href="{% url 'parakeets' %}" >
+            <h3>parakeets</h3>
+            <img src="{% static 'Parakeets.jpeg' %}" alt="parakeets">
+        </a>
+        <a href="{% url 'cockatiel' %}" >
+            <h3>Cockatiel</h3>
+            <img src="{% static 'Cockatiel.jpeg' %}" alt="Cockatiel">
+        </a>
+        <a href="{% url 'dove' %}" >
+            <h3>dove</h3>
+            <img src="{% static 'dove.jpeg' %}" alt="dove">
+        </a>
+        <a href="{% url 'canary' %}" >
+            <h3>canary</h3>
+            <img src="{% static 'canary.jpeg' %}" alt="canary">
+        </a>
+        <a href="{% url 'hyacinth' %}" >
+            <h3>hyacinth</h3>
+            <img src="{% static 'hyacinth.jpeg' %}" alt="hyacinth">
+        </a>
+        <a href="{% url 'lovebirds' %}" >
+            <h3>lovebirds</h3>
+            <img src="{% static 'lovebirds.jpeg' %}" alt="lovebirds">
+        </a>
+</div>
+</body>
+</html>

@@ -1,0 +1,28 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomeranian Information</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'pomeranian.css'%}">
+    <script>
+        function addItemAndRedirect() {
+            // Redirect to the payment option page
+            window.location.href = "{% url 'payment' %}"; // Use Django's URL template tag to generate the URL
+        }
+    </script>
+</head>
+<body>
+    <h1>Pomeranian Information</h1>
+
+    <ul>
+        <li><strong>Name:</strong> Pomeranian</li>
+        <li><strong>Age:</strong> Varies</li>
+        <li><strong>Lifespan:</strong> 12-16 years</li>
+        <li><strong>Height:</strong> 7-12 inches</li>
+        <li><strong>Weight:</strong> 3-7 pounds</li>
+        <li><strong>Color:</strong> Various, including white, black, brown, and orange</li>
+    </ul>
+<button class="add-button" onclick="addItemAndRedirect()">Adopt</button>
+</body>
+</html>

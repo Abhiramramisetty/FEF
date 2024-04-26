@@ -1,0 +1,34 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'siberian_cat.css' %}">
+    <script>
+        function addItemAndRedirect() {
+            // Redirect to the payment option page
+            window.location.href = "{% url 'payment' %}"; // Use Django's URL template tag to generate the URL
+        }
+    </script>
+</head>
+<body>
+    <h1>Siberian Cat</h1>
+    <h2>Western Breeds</h2>
+    <p>Siberian cats are affectionate, highly intelligent, playful, and sociable. These kitties have beautiful semi-longhair coats that change with the seasons. The long locks of the Siberian look their best with weekly care and brushing. Also known as the Siberian Forest Cat or Moscow Semi-Longhair, this cat is Russia’s national animal.</p>
+    <h2>Main Info</h2>
+    <ul>
+        <li><strong>Origin:</strong> Russia</li>
+        <li><strong>Coat Pattern:</strong> Variety of patterns including tabby, solid, colorpoint, and tortoiseshell</li>
+        <li><strong>Coat Length:</strong> Semi-longhair</li>
+        <li><strong>Health Issues:</strong>
+            <ul>
+                <li>Polycystic kidney disease (PKD)</li>
+                <li>Feline lower urinary tract disease</li>
+                <li>Hypertrophic cardiomyopathy (HCM)</li>
+                <li>Periodontal disease</li>
+            </ul>
+        </li>
+    </ul>
+<button class="add-button" onclick="addItemAndRedirect()">Adopt</button>
+</body>
+</html>

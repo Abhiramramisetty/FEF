@@ -1,0 +1,22 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'lovebirds.css' %}">
+    <script>
+        function addItemAndRedirect() {
+            // Redirect to the payment option page
+            window.location.href = "{% url 'payment' %}"; // Use Django's URL template tag to generate the URL
+        }
+    </script>
+</head>
+<body>
+Species Info<br>
+Weight: 2 ounces<br>
+Length: 5 to 6 inches<br>
+Lifespan: Properly cared for lovebirds can easily eclipse lifespans of 20+ years<br>
+Physical Characteristics: Mostly green, orange upper body and head, blue lower back and rump, red beak, white eyerings<br>
+<button class="add-button" onclick="addItemAndRedirect()">Adopt</button>
+</body>
+</html>

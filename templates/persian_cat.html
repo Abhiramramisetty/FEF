@@ -1,0 +1,36 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'persian_cat.css' %}">
+    <script>
+        function addItemAndRedirect() {
+            // Redirect to the payment option page
+            window.location.href = "{% url 'payment' %}"; // Use Django's URL template tag to generate the URL
+        }
+    </script>
+</head>
+<body>
+    <h1>Persian Cat</h1>
+    <h2>Persian Breeds</h2>
+    <p>Persians are one of the most popular breeds and easily recognizable by their fluffy longhaired coat, flat face, large cheeks, and expressive eyes. They like quiet time with their humans. While they prefer to lounge and rest, they are also known for their surprise bursts of playful activity.</p>
+    <h2>Main Info</h2>
+    <ul>
+        <li><strong>Origin:</strong> Iran</li>
+        <li><strong>Coat Pattern:</strong> Variety of solid, colorpoint, tabby, tortoiseshell, and calico patterns</li>
+        <li><strong>Coat Length:</strong> Longhair</li>
+        <li><strong>Health Issues:</strong>
+            <ul>
+                <li>Brachycephalic airway obstructive syndrome</li>
+                <li>Tear duct drainage</li>
+                <li>Polycystic kidney disease (PKD)</li>
+                <li>Hypertrophic cardiomyopathy (HCM)</li>
+                <li>Feline lower urinary tract disease</li>
+                <li>Progressive retinal atrophy</li>
+            </ul>
+        </li>
+    </ul>
+<button class="add-button" onclick="addItemAndRedirect()">Adopt</button>
+</body>
+</html>

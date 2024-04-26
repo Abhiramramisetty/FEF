@@ -1,0 +1,22 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'dove.css' %}">
+    <script>
+        function addItemAndRedirect() {
+            // Redirect to the payment option page
+            window.location.href = "{% url 'payment' %}"; // Use Django's URL template tag to generate the URL
+        }
+    </script>
+</head>
+<body >
+Special Info<br>
+Weight: 5 to 8 ounces<br>
+Length: 11 to 13 inches<br>
+Physical Characteristics: Brown and dull gray feathers, black eyes, beak, and collar surrounding the neck. Alternative colors include orange, white and pied (ring-necked doves).<br>
+Lifespan: When well cared for a pet dove can live from 8 -15 years depending on the species.
+<button class="add-button" onclick="addItemAndRedirect()">Adopt</button>
+</body>
+</html>

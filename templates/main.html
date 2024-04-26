@@ -1,0 +1,50 @@
+
+{% load static %}
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="{% static 'bgcolors.css' %}">
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-top: 20px; /* Add space between the title and the text */
+        }
+        .button-container {
+            position: absolute;
+            top: 50%;
+            right: 10%;
+            transform: translate(0, -50%);
+        }
+        .button {
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            margin-left: 10px; /* Add space between the buttons */
+        }
+        .text {
+            font-size: 20px; /* Adjust the font size as needed */
+        }
+    </style>
+</head>
+<body>
+    <h1 align="middle">FurEver Friends</h1>
+    <marquee behavior="scroll" bgcolor="lightpink">:):):):) Pets are pure friends for Humans :):):):)</marquee>
+    <div class="container">
+        <div class="text">
+            <p>Finding a new furry friend while also implying a friendly and supportive environment for both pets and adopters.</p>
+        </div>
+<!--        <div class="image">-->
+<!--            <img src="{% static 'pet3.jpeg' %}" width="500" height="750">-->
+<!--        </div>-->
+        <div class="button-container">
+            <a href="{% url 'signup' %}" class="button">Sign Up</a>
+            <a href="{% url 'signin' %}" class="button">Sign In</a>
+        </div>
+    </div>
+</body>
+</html>

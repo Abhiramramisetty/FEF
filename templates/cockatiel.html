@@ -1,0 +1,22 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'cockatiel.css' %}">
+    <script>
+        function addItemAndRedirect() {
+            // Redirect to the payment option page
+            window.location.href = "{% url 'payment' %}"; // Use Django's URL template tag to generate the URL
+        }
+    </script>
+</head>
+<body>
+Special Info<br>
+Weight: 3 ounces<br>
+Length: 12 to 13 inches (adults)<br>
+Physical Characteristics: Predominantly gray feathers with orange spots around the ears and yellow and white accents. Males are yellow-headed while females are almost completely gray.<br>
+Lifespan: With proper love and care a pet cockatiel can easily live for 15 - 20 years. In rare cases, these birds have been known to live for as long as 30 years.<br>
+<button class="add-button" onclick="addItemAndRedirect()">Adopt</button>
+</body>
+</html>

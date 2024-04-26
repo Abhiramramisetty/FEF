@@ -1,0 +1,40 @@
+<!--{% load static %}-->
+<!--<html lang="en">-->
+<!--<head>-->
+<!--    <link rel="stylesheet" type="text/css" href="{% static 'css.css' %}">-->
+<!--</head>-->
+<!--<body>-->
+<!--    <form method="POST">-->
+<!--    {% csrf_token %}-->
+<!--        <h1 align="middle" >FurEver Friends</h1>-->
+<!--        <input type="text" name="nm" placeholder="Name"><br>-->
+<!--        <input type="email" name="mail" placeholder="Email"><br>-->
+<!--        <input type="password" name="pw" placeholder="Password"><br>-->
+<!--        <input type="password" name="cpw" placeholder="Confirm-Passsword"><br>-->
+<!--        <input type="submit" value="ADD" onclick="success.html">-->
+<!--    </form>-->
+<!--</body>-->
+<!--</html>-->
+
+
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'css.css' %}">
+</head>
+<body>
+    <div class="form-container">
+        <form method="POST">
+            {% csrf_token %}
+            <input type="text" name="nm" placeholder="Name"><br>
+            <input type="email" name="mail" placeholder="Email"><br>
+            <input type="password" name="pw" placeholder="Password"><br>
+            <input type="password" name="cpw" placeholder="Confirm Password"><br>
+            <button type="submit" class="button">Sign Up</button>
+        </form>
+    </div>
+</body>
+</html>

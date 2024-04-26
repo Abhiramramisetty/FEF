@@ -1,0 +1,29 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Beagle Information</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'beagle.css'%}">
+    <script>
+        function addItemAndRedirect() {
+            // Redirect to the payment option page
+            window.location.href = "{% url 'payment' %}"; // Use Django's URL template tag to generate the URL
+        }
+    </script>
+</head>
+<body>
+    <h1>Beagle Information</h1>
+
+    <ul>
+        <li><strong>Name:</strong> Beagle</li>
+        <li><strong>Age:</strong> Varies</li>
+        <li><strong>Lifespan:</strong> 12-15 years</li>
+        <li><strong>Height:</strong> 13-15 inches</li>
+        <li><strong>Weight:</strong> 18-30 pounds</li>
+        <li><strong>Color:</strong> Tricolor (black, tan, and white)</li>
+
+    </ul>
+<button class="add-button" onclick="addItemAndRedirect()">Adopt</button>
+</body>
+</html>

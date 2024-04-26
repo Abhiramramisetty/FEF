@@ -1,0 +1,57 @@
+{% load static %}
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'adop.css' %}">
+    <style>
+        body {
+            color: white;
+            display: flex; /* Use flexbox */
+            flex-direction: column; /* Align content in a column */
+            align-items: center; /* Center horizontally */
+        }
+
+        /* Style the images to display side by side with padding */
+        .container {
+            display: flex; /* Use flexbox */
+            justify-content: space-around; /* Align images with equal space around them */
+            align-items: center; /* Center vertically */
+        }
+
+        .container a {
+            display: flex; /* Set the anchor tags as flex containers */
+            align-items: center; /* Center the content vertically */
+            margin: 0 10px; /* Add spacing between images */
+            flex-direction: column; /* Arrange the text above the images */
+            text-align: center; /* Center the text */
+            padding: 20px; /* Add padding around the images */
+        }
+
+        /* Set the dimensions of the images */
+        .container a img {
+            width: 400px; /* Set the width of the images */
+            height: 400px; /* Set the height of the images */
+            object-fit: cover; /* Ensure the images maintain their aspect ratio */
+        }
+    </style>
+</head>
+<body>
+    <h1>This is Adoption Page</h1>
+    <div class="container">
+        <a href="{% url 'cats' %}" >
+            <h3>Cats</h3>
+            <img src="{% static 'cats.jpg' %}" alt="cats">
+        </a>
+        <a href="{% url 'dogs' %}" >
+            <h3>Dogs</h3>
+            <img src="{% static 'dogs.jpg' %}" alt="dogs">
+        </a>
+        <a href="{% url 'birds' %}" >
+            <h3>Birds</h3>
+            <img src="{% static 'birds.jpg' %}" alt="birds">
+        </a>
+    </div>
+</body>
+</html>

@@ -1,0 +1,80 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="{% static 'dog.css'%}">
+    <title>Dogs</title>
+    <style>
+        body {
+            color: white;
+            display: flex; /* Use flexbox */
+            flex-direction: column; /* Align content in a column */
+            align-items: center; /* Center horizontally */
+        }
+
+        /* Style the images to display side by side with padding */
+        .container {
+            display: flex; /* Use flexbox */
+            justify-content: space-around; /* Align images with equal space around them */
+            align-items: center; /* Center vertically */
+        }
+
+        .container a {
+            display: flex; /* Set the anchor tags as flex containers */
+            align-items: center; /* Center the content vertically */
+            margin: 0 10px; /* Add spacing between images */
+            flex-direction: column; /* Arrange the text above the images */
+            text-align: center; /* Center the text */
+            padding: 20px; /* Add padding around the images */
+        }
+
+        /* Set the dimensions of the images */
+        .container a img {
+            width: 400px; /* Set the width of the images */
+            height: 400px; /* Set the height of the images */
+            object-fit: cover; /* Ensure the images maintain their aspect ratio */
+        }
+    </style>
+</head>
+<body>
+Dogs:
+<div class="container">
+        <a href="{% url 'bulldog' %}" >
+            <h3>bulldog</h3>
+            <img src="{% static 'bulldog.jpg' %}" alt="bulldog">
+        </a>
+        <a href="{% url 'beagle' %}" >
+            <h3>beagle</h3>
+            <img src="{% static 'beagle.jpg' %}" alt="beagle">
+        </a>
+        <a href="{% url 'doberman' %}" >
+            <h3>doberman</h3>
+            <img src="{% static 'doberman.jpg' %}" alt="doberman">
+        </a>
+        <a href="{% url 'germanshephard' %}" >
+            <h3>germanshephard</h3>
+            <img src="{% static 'germanshepard.jpg' %}" alt="germanshephard">
+        </a>
+        <a href="{% url 'goldenretriever' %}" >
+            <h3>goldenretriever</h3>
+            <img src="{% static 'goldenretriever.jpg' %}" alt="goldenretriever">
+        </a>
+        <a href="{% url 'husky' %}" >
+            <h3>husky</h3>
+            <img src="{% static 'husky.jpg' %}" alt="husky">
+        </a>
+     <a href="{% url 'labrador' %}" >
+            <h3>labrador</h3>
+            <img src="{% static 'labrador.jpg' %}" alt="labrador">
+        </a>
+     <a href="{% url 'pomeranian' %}" >
+            <h3>pomeranian</h3>
+            <img src="{% static 'pomeranian.jpg' %}" alt="pomeranian">
+        </a>
+     <a href="{% url 'shiztzu' %}" >
+            <h3>shiztzu</h3>
+            <img src="{% static 'shiztzu.jpg' %}" alt="shiztzu">
+        </a>
+</div>
+</body>
+</html>

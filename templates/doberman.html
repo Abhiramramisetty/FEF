@@ -1,0 +1,28 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doberman Information</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'doberman.css'%}">
+    <script>
+        function addItemAndRedirect() {
+            // Redirect to the payment option page
+            window.location.href = "{% url 'payment' %}"; // Use Django's URL template tag to generate the URL
+        }
+    </script>
+</head>
+<body>
+    <h1>Doberman Information</h1>
+
+    <ul>
+        <li><strong>Name:</strong> Doberman</li>
+        <li><strong>Age:</strong> Varies</li>
+        <li><strong>Lifespan:</strong> 10-13 years</li>
+        <li><strong>Height:</strong> 26-28 inches (male), 24-26 inches (female)</li>
+        <li><strong>Weight:</strong> 75-100 pounds (male), 60-90 pounds (female)</li>
+        <li><strong>Color:</strong> Black, red, blue, and fawn, with rust markings</li>
+    </ul>
+<button class="add-button" onclick="addItemAndRedirect()">Adopt</button>
+</body>
+</html>

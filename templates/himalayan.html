@@ -1,0 +1,36 @@
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="{% static 'himalayan.css' %}">
+    <script>
+        function addItemAndRedirect() {
+            // Redirect to the payment option page
+            window.location.href = "{% url 'payment' %}"; // Use Django's URL template tag to generate the URL
+        }
+    </script>
+</head>
+<body>
+    <h1>Himalayan</h1>
+    <h2>Persian Breeds</h2>
+    <p>
+        The Himalayan is part of the Persian Breed group and is known as one of the oldest breeds. They are sweet-natured, gentle, and easygoing cats that get along well with others in a calm household. They share similar physical features with the Persian, such as a luxurious coat, a flat face with big cheeks, and large, round eyes.
+    </p>
+    <h2>Main Info</h2>
+    <ul>
+        <li><strong>Origin:</strong> UK</li>
+        <li><strong>Coat Pattern:</strong> Solid point, tortoiseshell, bicolor point, tricolor point, tabby or lynx point, smoke and shaded point</li>
+        <li><strong>Coat Length:</strong> Longhair</li>
+        <li><strong>Health Issues:</strong>
+            <ul>
+                <li>Prone to obesity</li>
+                <li>Polycystic kidney disease (PKD)</li>
+                <li>Tear duct drainage</li>
+                <li>Progressive retinal atrophy</li>
+            </ul>
+        </li>
+    </ul>
+<button class="add-button" onclick="addItemAndRedirect()">Adopt</button>
+</body>
+</html>
